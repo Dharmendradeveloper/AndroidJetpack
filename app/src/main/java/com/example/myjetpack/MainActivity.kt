@@ -38,7 +38,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting() {
-    var counter by rememberSaveable {
+    /**
+     *@rememberSaveable used to save the value even after configuration changes
+     * @remember used to save the value and loss the value on configuration changes
+     * */
+    var counter by remember {
         androidx.compose.runtime.mutableIntStateOf(0)
     }
 
